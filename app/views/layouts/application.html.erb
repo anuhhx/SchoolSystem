@@ -12,12 +12,12 @@
   <body>
     
     <header>
-
-      <div class="header_image">
+      
+      <%= link_to root_path do %>  
+      
+        <%= image_tag( "header_image.png", :class => "header_image" )%> <!--Header image/ website logo.-->
         
-        <%= image_tag "header_image.png" %>
-        
-      </div>
+      <% end %>
       
       <div class="navbar"> <!--Overarching nav bar-->
 

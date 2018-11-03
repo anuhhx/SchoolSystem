@@ -1,3 +1,23 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.about_splash{
+    
+    margin: auto;
+    margin-top: 20px;
+    display: block;
+    width: 350px;
+
+}
+h1{
+    text-align: center;
+    margin: 2px;
+}
+.description{
+    width: 450px;
+    margin:auto;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    display: block;
+}
