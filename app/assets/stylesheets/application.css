@@ -51,14 +51,22 @@ body{
     font-weight: bold;
 
 }
+
+.navbar a:hover{
+
+    background-color: #F76F8E;
+    color: #FFEAD0;
+    
+}
+
 main{
     
-
     width: 1000px;
     background-color: #FFEAD0;
     /*height: 100%;*/
 
 }
+
 .content{
     
     margin: 15px;
