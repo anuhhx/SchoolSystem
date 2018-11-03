@@ -1,0 +1,18 @@
+<h1>New County</h1>
+<%= form_for :county, url: counties_path do |f| %>
+ 
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :id %><br>
+    <%= f.text_field :id %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>

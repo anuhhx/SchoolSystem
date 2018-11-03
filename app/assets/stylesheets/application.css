@@ -70,5 +70,29 @@ main{
 .content{
     
     margin: 15px;
+    padding-top: 5px;
     overflow: auto;
+}
+
+label{
+    
+    font-size: 20px;
+}
+
+input[type=button], input[type=submit] {
+    
+    background-color: #F76F8E;   
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+input[type=text] {
+    
+    border: none;
+    padding: 10px 10px;
+    text-decoration: none;
+
 }
