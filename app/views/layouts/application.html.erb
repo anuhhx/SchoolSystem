@@ -10,6 +10,40 @@
   </head>
 
   <body>
-    <%= yield %>
+    
+    <header>
+
+      <div class="header_image">
+        
+        <%= image_tag "header_image.png" %>
+        
+      </div>
+      
+      <div class="navbar"> <!--Overarching nav bar-->
+
+        <div class="navbuttons">
+
+          <%= link_to 'Home', root_path %>
+          <%= link_to 'Counties', root_path %>
+          <%= link_to 'Schools', root_path %>
+
+        </div>
+
+      </div>
+
+
+    </header>
+
+    <main>
+      
+      <div class="content">
+        
+        <%= yield %>
+        
+      </div>
+    
+    </main>
+    
   </body>
+  
 </html>

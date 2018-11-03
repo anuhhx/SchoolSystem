@@ -14,3 +14,51 @@
  *= require_self
  
  */
+ 
+.header_image{
+    
+    padding-top: 40px;
+    padding-bottom: 10px;
+    
+}
+
+body{
+    
+    font-family: "Arial", serif;
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #FFD8AD;
+    /*min-height: 100%;*/
+    color: #37505C;
+    
+}
+
+.navbar{
+
+    background-color: #FFEAD0;
+    height: 50px;
+
+}
+
+.navbar a {
+    
+    color: #37505C;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 14px 16px;
+    float: left;
+
+}
+main{
+    
+
+    width: 1000px;
+    background-color: #FFEAD0;
+    height: 100%;
+
+}
+.content{
+    
+    margin: 10px;
+    
+}
