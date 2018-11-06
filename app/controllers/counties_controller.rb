@@ -1,4 +1,7 @@
 class CountiesController < ApplicationController
+    def index
+        @counties=County.all
+    end
     
     def new
         

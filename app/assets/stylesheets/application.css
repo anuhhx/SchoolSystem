@@ -96,3 +96,12 @@ input[type=text] {
     text-decoration: none;
 
 }
+table {
+    width: 40%;
+}
+td,th {
+    
+    padding:10px;
+    border-bottom: 1px solid #ddd;
+}
+
