@@ -5,9 +5,20 @@ class CountiesController < ApplicationController
     end
     
     def create
+        @county= County.new(county_params)
         
-        render plain: params[:county].inspect
+        @county.save
+        redirect_to @county
         
     end
     
+    def show
+        @county=County.find(params[:id])
+    end
+    
 end
+
+private
+    def county_params
+        params.require(:county).permit(:name)
+    end
