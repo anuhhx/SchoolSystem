@@ -22,6 +22,20 @@ class CountiesController < ApplicationController
         @county=County.find(params[:id])
     end
     
+    def edit
+        @county = County.find(params[:id])
+    end
+    
+    def update
+        @county = County.find(params[:id])
+        
+        if @county.update(county_params)
+            redirect_to @county
+        else
+            render 'edit'
+        end
+    end
+    
 end
 
 private
