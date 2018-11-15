@@ -30,10 +30,17 @@ class CountiesController < ApplicationController
         @county = County.find(params[:id])
         
         if @county.update(county_params)
-            redirect_to @county
+            redirect_to counties_path
         else
             render 'edit'
         end
+    end
+    
+    def destroy
+        @county = County.find(params[:id])
+        @county.destroy
+        
+        redirect_to counties_path
     end
     
 end
