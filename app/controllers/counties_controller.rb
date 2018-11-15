@@ -4,14 +4,17 @@ class CountiesController < ApplicationController
     end
     
     def new
-        
+        @county = County.new
     end
     
     def create
         @county= County.new(county_params)
         
-        @county.save
-        redirect_to @county
+        if @county.save
+            redirect_to @county
+        else
+            render 'new'
+        end
         
     end
     
