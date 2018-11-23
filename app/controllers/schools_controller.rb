@@ -18,6 +18,32 @@ class SchoolsController < ApplicationController
             render 'new'
         end
     end
+    
+    def edit
+        @county = County.find(params[:county_id])
+        @school = County.find(params[:county_id]).schools.find(params[:id])
+    end
+    
+    def update
+        @county = County.find(params[:id])
+        @school=County.find(params[:county_id]).schools.find(params[:id])
+        
+        if @school.update(school_params)
+            redirect_to county_school_path
+        else
+            render 'edit'
+        end
+    end
+    
+    def destroy
+        @county=County.find(params[:county_id])
+        @school=County.find(params[:county_id]).schools.find(params[:id])
+        @school.destroy
+        
+        redirect_to county_path(@county)
+    end
+    
+    
     private
     def school_params
         params.require(:school).permit(:name,:address)

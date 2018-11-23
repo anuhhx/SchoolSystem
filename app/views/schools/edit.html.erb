@@ -1,0 +1,17 @@
+<h1>Change School Name</h1>
+<%= form_for @school, url: county_school_path(@county), method: :patch do |f| %>
+
+  
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
+
+<%= link_to 'Back', county_school_path %>
