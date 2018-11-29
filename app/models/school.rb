@@ -1,5 +1,6 @@
 class School < ApplicationRecord
   belongs_to :county
+  has_many :reviews
   validates :name, presence: true, length: {minimum:5}
   validates :address, presence: true
   validates :grade, presence: true, lenth: {minimum:4}
