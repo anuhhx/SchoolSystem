@@ -15,6 +15,17 @@
  
  */
  
+ main a{
+    
+    background-color: #F76F8E;   
+    border: none;
+    color: #FFEAD0;
+    padding: 8px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
 .header_image{
     
     padding-top: 40px;
@@ -97,7 +108,7 @@ input[type=text] {
 
 }
 table {
-    width: 90%;
+    width: 100%;
 }
 td,th {
     
@@ -105,3 +116,23 @@ td,th {
     border-bottom: 1px solid #ddd;
 }
 
+
+
+table a{
+    
+     background-color: #37505C;   
+    border: none;
+    color: #FFEAD0;
+    padding: 8px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+table a:hover{
+    
+     background-color: #F76F8E;   
+    color: #FFEAD0;
+
+    
+}
