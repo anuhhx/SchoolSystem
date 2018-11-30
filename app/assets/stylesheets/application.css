@@ -35,7 +35,6 @@
 
 
 body{
-    padding-left: 0; padding-right: 0;
     font-family: "Arial", serif;
     width: 1000px;
     margin: 0 auto;
@@ -80,6 +79,8 @@ main{
 
 .content{
     
+    padding-left: 0; padding-right: 0;
+    padding-bottom: 20px;
     margin: 15px;
     padding-top: 5px;
     overflow: auto;
