@@ -134,6 +134,14 @@ table a:hover{
     
      background-color: #F76F8E;   
     color: #FFEAD0;
-
-    
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 26px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  background: #B9B5B4;
 }

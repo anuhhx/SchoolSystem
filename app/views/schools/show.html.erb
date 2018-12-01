@@ -1,14 +1,19 @@
 <h1> <%=@school.name %></h1>
 
+<iframe width="500" height="500" frameborder="0" style="border:0"
+ src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCaYT5wYepNyq1XIwjOHDgnBAxXuycwL00&q=<%=@school.address %>"
+ allowfullscreen>
+</iframe>
+
+
 <h2> Reviews</h2>
 <% @school.reviews.each do |review| %>
-<p>
+<div class="circle">
     <strong> <%=review.initials %></strong>
-    <%= review.created_at%>
-    
-</p>
+</div> <%= review.created_at%>
+<p>
 <%=review.comment%>
-
+</p>
 <%end%>
 
 <%= form_for([@school,@school.reviews.build]) do |f| %>
