@@ -1,7 +1,10 @@
 class SchoolsController < ApplicationController
+    def index
+        @schools=School.all
+    end
     def show
-        @school=County.find(params[:county_id]).schools.find(params[:id])
-        @county=County.find(params[:county_id])
+        @school=School.find(params[:id])
+        @county=@school.county
     end
     
     def new

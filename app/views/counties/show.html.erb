@@ -1,4 +1,4 @@
-<h1><%=@county.name%></h1>
+<h1>Schools In <%=@county.name%></h1>
 <% if @county.schools.length==0%>
 <h1>Whoops! No Schools added here yet</h1>
 <%else%>
@@ -20,4 +20,7 @@
 <%end%>
 <br>
 <br>
-<%= link_to 'New School', new_county_school_path(@county) %><br>
+<%= link_to 'New School', new_county_school_path(@county) %>
+<br>
+<br>
+<%= link_to 'Back to Counties', counties_path %>

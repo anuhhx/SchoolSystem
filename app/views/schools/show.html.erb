@@ -1,5 +1,4 @@
 <h1> <%=@school.name %></h1>
-<h1> <%=@school.phone %></h1>
 
 <iframe width="500" height="500" frameborder="0" style="border:0"
  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCaYT5wYepNyq1XIwjOHDgnBAxXuycwL00&q=<%=@school.address %>"
@@ -31,4 +30,4 @@
 </p>
 <%end%>
 
-<%= link_to 'Back to Counties', county_path(@county) %>
+<%= link_to "Back", :back %>
