@@ -10,5 +10,14 @@ feature"User adds a county" do
         click_link "New County"
         expect(page).to have_field("Name")
     end
-
+    
+    scenario "User succesfully adds a new county" do
+        visit new_county_path
+        expect(page).to have_content("New County")
+        fill_in "Name", with: "Capybara County"
+        click_button "Save County"
+        expect(page).to have_content("Capybara County")
+    end
+    
 end
+
