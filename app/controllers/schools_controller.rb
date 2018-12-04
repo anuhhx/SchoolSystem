@@ -23,13 +23,13 @@ class SchoolsController < ApplicationController
     end
     
     def edit
-        @county = County.find(params[:county_id])
-        @school = County.find(params[:county_id]).schools.find(params[:id])
+        @school = School.find(params[:id])
+        @county = @school.id
     end
     
     def update
-        @county = County.find(params[:id])
-        @school=County.find(params[:county_id]).schools.find(params[:id])
+        @school=School.find(params[:id])
+        @county=@school.county_id
         
         if @school.update(school_params)
             redirect_to county_school_path
@@ -40,7 +40,7 @@ class SchoolsController < ApplicationController
     
     def destroy
         @county=County.find(params[:county_id])
-        @school=County.find(params[:county_id]).schools.find(params[:id])
+        @school=@School.find(params[:id])
         @school.destroy
         
         redirect_to county_path(@county)
