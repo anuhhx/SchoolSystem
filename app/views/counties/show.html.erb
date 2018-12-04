@@ -12,7 +12,7 @@
     <tr>
         <td> <%= school.name %></td>
         <td> <%= link_to 'Information', county_school_path(@county, school) %></td>
-        <td> <%= link_to 'Edit Information', edit_county_school_path(@county, school) %></td>
+        <td> <%= link_to 'Edit', edit_county_school_path(@county, school) %></td>
         <td><%= link_to 'Delete', county_school_path(@county, school), method: :delete, data: { confirm: 'Are you sure?' } %></td>
    
     </tr>

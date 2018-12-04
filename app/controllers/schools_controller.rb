@@ -24,12 +24,11 @@ class SchoolsController < ApplicationController
     
     def edit
         @school = School.find(params[:id])
-        @county = @school.id
+        @county = @school.county_id
     end
     
     def update
         @school=School.find(params[:id])
-        @county=@school.county_id
         
         if @school.update(school_params)
             redirect_to county_school_path
