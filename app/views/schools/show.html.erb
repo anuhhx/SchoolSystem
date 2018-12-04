@@ -1,33 +1,57 @@
 <h1> <%=@school.name %></h1>
 
-<iframe width="500" height="500" frameborder="0" style="border:0"
- src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCaYT5wYepNyq1XIwjOHDgnBAxXuycwL00&q=<%=@school.address %>"
- allowfullscreen>
-</iframe>
 
 
-<h2> Reviews</h2>
-<% @school.reviews.each do |review| %>
-<div class="circle">
-    <strong> <%=review.initials %></strong>
-</div> <%= review.created_at%>
-<p>
-<%=review.comment%>
-</p>
-<%end%>
+<div class="row">
+  <div class="column">
+         <br>
+        <iframe width="470" height="470" frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCaYT5wYepNyq1XIwjOHDgnBAxXuycwL00&q=<%=@school.address %>"
+        allowfullscreen>
+        </iframe>
+        
+        <h1> <%=@school.phone %></h1>
+        
+        <h1> <%=@school.address %></h1>
+        
+        <h1> <%=@school.grade %></h1>
+        
+        <h1> <%=@school.website %></h1>
+        
+        
+      
+  </div>
+  
+  <div class="column">
+      
+        <h2> Reviews</h2>
+        <% @school.reviews.each do |review| %>
+        <div class="circle">
+            <strong> <%=review.initials %></strong>
+        </div> <%= review.created_at%>
+        <p>
+        <%=review.comment%>
+        </p>
+        <%end%>
+        
+        <%= form_for([@school,@school.reviews.build]) do |f| %>
+        <p>
+            <%= f.label :initials %> <br>
+            <%= f.text_field :initials %>
+        </p>
+        <p>
+            <%= f.label :comment %><br>
+            <%= f.text_field :comment %>
+        </p>
+        <p>
+            <%= f.submit%>
+        </p>
+        <%end%>
+        
+        <%= link_to "Back", :back %>
+        
 
-<%= form_for([@school,@school.reviews.build]) do |f| %>
-<p>
-    <%= f.label :initials %> <br>
-    <%= f.text_field :initials %>
-</p>
-<p>
-    <%= f.label :comment %><br>
-    <%= f.text_field :comment %>
-</p>
-<p>
-    <%= f.submit%>
-</p>
-<%end%>
 
-<%= link_to "Back", :back %>
+
+    </div>
+</div>
