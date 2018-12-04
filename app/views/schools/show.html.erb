@@ -1,31 +1,27 @@
 <h1> <%=@school.name %></h1>
-<<<<<<< HEAD
 
-=======
-<%=@school.phone %><br>
-<iframe width="500" height="500" frameborder="0" style="border:0"
- src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCaYT5wYepNyq1XIwjOHDgnBAxXuycwL00&q=<%=@school.name %>"
- allowfullscreen>
-</iframe>
->>>>>>> 0f65dc4f2d5f34ec6ef2ff476c83abad3340b447
-
+<%= image_tag( "divide_plain.png", :class => "content_divide" )%>
 
 <div class="row">
   <div class="column">
          <br>
-        <iframe width="470" height="470" frameborder="0" style="border:0"
+        
+        <iframe width="465" height="465" frameborder="0" style="border: 3px solid #36535E"  
         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCaYT5wYepNyq1XIwjOHDgnBAxXuycwL00&q=<%=@school.address %>"
         allowfullscreen>
         </iframe>
         
-        <h1> <%=@school.phone %></h1>
+        <h2>Phone Number</h2>
+        <%=@school.phone %>
         
-        <h1> <%=@school.address %></h1>
+        <h2>Address</h2>
+        <%=@school.address %>
         
-        <h1> <%=@school.grade %></h1>
+        <h2>Grade Level</h2>
+        <%=@school.grade %>
         
-        <h1> <%=@school.website %></h1>
-        
+        <h2>Website</h2>
+        <%=@school.website %>
         
       
   </div>
@@ -63,3 +59,5 @@
 
     </div>
 </div>
+<br>
+<%= image_tag( "divide.png", :class => "content_divide" )%>

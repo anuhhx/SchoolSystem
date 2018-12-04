@@ -39,11 +39,11 @@ class SchoolsController < ApplicationController
     end
     
     def destroy
-        @county=County.find(params[:county_id])
-        @school=@School.find(params[:id])
+
+        @school=School.find(params[:id])
         @school.destroy
         
-        redirect_to county_path(@county)
+        redirect_back(fallback_location: root_path)
     end
     
     

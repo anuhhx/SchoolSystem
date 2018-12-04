@@ -1,4 +1,5 @@
 <h1>Schools In <%=@county.name%></h1>
+<%= image_tag( "divide_plain.png", :class => "content_divide" )%>
 <% if @county.schools.length==0%>
 <h1>Whoops! No Schools added here yet</h1>
 <%else%>
@@ -24,3 +25,4 @@
 <br>
 <br>
 <%= link_to 'Back to Counties', counties_path %>
+<%= image_tag( "divide.png", :class => "content_divide" )%>

@@ -1,5 +1,5 @@
 <h1>Change County Name</h1>
- 
+ <%= image_tag( "divide_plain.png", :class => "content_divide" )%>
 <%= form_for :county, url: county_path(@county), method: :patch do |f| %>
  
   <% if @county.errors.any? %>
@@ -31,3 +31,4 @@
 <% end %>
 
 <%= link_to "Back", :back %>
+<%= image_tag( "divide.png", :class => "content_divide" )%>
